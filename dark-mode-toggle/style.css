@@ -1,0 +1,67 @@
+/* Stile für das Body-Element */
+body {
+    margin: 0; /* Entfernt den Standard-Margin des Browsers */
+    display: flex; /* Verwendet Flexbox für die Layout-Ausrichtung */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    height: 100vh; /* Setzt die Höhe auf 100% der Viewport-Höhe */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+}
+
+/* Stile für das Input-Element (Checkbox) */
+.input {
+    visibility: hidden; /* Versteckt das Checkbox-Element, aber behält seinen Platz */
+}
+
+/* Stile für das Label, das als Schalter dient */
+.label {
+    position: absolute; /* Positioniert das Label absolut im Body */
+    width: 80px; /* Setzt die Breite des Labels */
+    height: 40px; /* Setzt die Höhe des Labels */
+    background-color: lightgray; /* Hintergrundfarbe des Labels */
+    border-radius: 20px; /* Runde Ecken für das Label */
+    cursor: pointer; /* Zeigt eine Hand als Cursor an, um die Klickbarkeit zu betonen */
+}
+
+/* Stile für den Kreis im Schalter */
+.circle {
+    width: 34px; /* Setzt die Breite des Kreises */
+    background-color: white; /* Hintergrundfarbe des Kreises */
+    height: 34px; /* Setzt die Höhe des Kreises */
+    border-radius: 50%; /* Macht den Kreis rund */
+    top: 3px; /* Positioniert den Kreis oben im Label */
+    position: absolute; /* Positioniert den Kreis absolut im Label */
+    left: 3px; /* Positioniert den Kreis links im Label */
+    animation: toggleOff .4s linear forwards; /* Setzt die Animation für den Kreis */
+    transition: .4s; /* Übergangseffekt für alle stilistischen Änderungen */
+}
+
+/* Stile für den Schalter im "dunkelmodus" (wenn die Checkbox aktiviert ist) */
+.input:checked + .label {
+    background-color: white; /* Hintergrundfarbe des Labels im Dunkelmodus */
+}
+
+/* Stile für den Kreis im "dunkelmodus" (wenn die Checkbox aktiviert ist) */
+.input:checked + .label .circle {
+    animation: toggleOn .4s linear forwards; /* Setzt die Animation für den Kreis im Dunkelmodus */
+    background-color: black; /* Hintergrundfarbe des Kreises im Dunkelmodus */
+}
+
+/* Keyframes für die Animation, wenn der Schalter von "aus" auf "ein" wechselt */
+@keyframes toggleOn {
+    0% {
+        transform: translateX(0); /* Startposition des Kreises */
+    }
+    100% {
+        transform: translateX(40px); /* Endposition des Kreises */
+    }
+}
+
+/* Keyframes für die Animation, wenn der Schalter von "ein" auf "aus" wechselt */
+@keyframes toggleOff {
+    0% {
+        transform: translateX(40px); /* Startposition des Kreises */
+    }
+    100% {
+        transform: translateX(0); /* Endposition des Kreises */
+    }
+}

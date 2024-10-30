@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="image-container">
+        <!-- Jedes span repräsentiert ein Bild in der 3D-Galerie -->
+        <!-- Die --i Variable wird verwendet, um den Rotationswinkel zu berechnen (z.B. 45 Grad * --i) -->
+        <span style="--i: 1">
+            <img src="https://picsum.photos/id/237/300/200"> <!-- Erstes Bild mit einem zufälligen Bild-URL -->
+        </span>
+        <span style="--i: 2">
+            <img src="https://picsum.photos/id/23/300/200"> <!-- Zweites Bild -->
+        </span>
+        <span style="--i: 3">
+            <img src="https://picsum.photos/id/48/300/200"> <!-- Drittes Bild -->
+        </span>
+        <span style="--i: 4">
+            <img src="https://picsum.photos/id/235/300/200"> <!-- Viertes Bild -->
+        </span>
+        <span style="--i: 5">
+            <img src="https://picsum.photos/id/12/300/200"> <!-- Fünftes Bild -->
+        </span>
+        <span style="--i: 6">
+            <img src="https://picsum.photos/id/59/300/200"> <!-- Sechstes Bild -->
+        </span>
+        <span style="--i: 7">
+            <img src="https://picsum.photos/id/160/300/200"> <!-- Siebtes Bild -->
+        </span>
+        <span style="--i: 8">
+            <img src="https://picsum.photos/id/370/300/200"> <!-- Achtes Bild -->
+        </span>
+    </div>
+    
+    <div class="btn-container">
+        <!-- Buttons für das Navigieren der 3D-Galerie -->
+        <button class="btn" id="prev">prev</button> <!-- Vorheriger Button zum Rotieren der Galerie nach links -->
+        <button class="btn" id="next">next</button> <!-- Nächster Button zum Rotieren der Galerie nach rechts -->
+    </div>    
+
+    <script src="main.js"></script>
+</body>
+</html>

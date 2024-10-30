@@ -1,0 +1,64 @@
+body {
+    margin: 0; /* Entfernt den Standardabstand des Body-Elements */
+    display: flex; /* Verwendet Flexbox, um den Inhalt zu arrangieren */
+    flex-direction: column; /* Ordnet die Kinder vertikal an */
+    align-items: center; /* Zentriert die Kinder horizontal */
+    text-align: center; /* Zentriert den Text in den Kindelementen */
+    height: 100vh; /* Setzt die Höhe des Body auf 100% der Ansichtshöhe */
+    justify-content: center; /* Zentriert die Kinder vertikal */
+    background-color: black; /* Setzt den Hintergrund des Body auf Schwarz */
+    overflow: hidden; /* Verhindert Scrollen, auch wenn der Inhalt größer ist */
+}
+
+.image-container {
+    position: relative; /* Erlaubt den Kindelementen mit "position: absolute" sich relativ zu diesem Container zu positionieren */
+    width: 200px; /* Breite des Containers */
+    height: 200px; /* Höhe des Containers */
+    transform-style: preserve-3d; /* Erhält die 3D-Transformation für Kinder */
+    transform: perspective(1000px) rotateY(0deg); /* Setzt die Anfangsperspektive und Rotation */
+    transition: transform 0.7s; /* Animiert die Transformationen über 0,7 Sekunden */
+}
+
+.image-container span {
+    position: absolute; /* Platziert das Element relativ zum Container */
+    top: 0; /* Setzt den oberen Rand des Elements auf 0 */
+    left: 0; /* Setzt den linken Rand des Elements auf 0 */
+    width: 100%; /* Das Element nimmt die volle Breite des Containers ein */
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px); /* Rotiert das Element und verschiebt es in die Z-Ebene (3D) */
+}
+
+.image-container img {
+    position: absolute; /* Platziert das Bild relativ zu seinem Elternteil (dem span) */
+    top: 0; /* Setzt den oberen Rand des Bildes auf 0 */
+    left: 0; /* Setzt den linken Rand des Bildes auf 0 */
+    width: 100%; /* Das Bild füllt die gesamte Breite des Containers aus */
+}
+
+.btn-container {
+    position: relative; /* Setzt die Positionierung relativ zu einem anderen Element, falls erforderlich */
+    width: 80%; /* Breite des Containers, in dem sich die Buttons befinden */
+    justify-content: space-between; /* Verteilt die Buttons gleichmäßig innerhalb des Containers */
+}
+
+.btn {
+    position: absolute; /* Platziert die Buttons relativ zum Container */
+    bottom: -80px; /* Positioniert die Buttons 80px unterhalb des Containers */
+    background-color: slateblue; /* Setzt die Hintergrundfarbe der Buttons */
+    color: white; /* Setzt die Schriftfarbe auf Weiß */
+    border: none; /* Entfernt den Rand der Buttons */
+    padding: 10px 20px; /* Fügt Innenabstand zum Button hinzu */
+    border-radius: 5px; /* Rundet die Ecken des Buttons ab */
+    cursor: pointer; /* Ändert den Mauszeiger zu einem Zeigefinger bei Hover */
+}
+
+.btn:hover {
+    filter: brightness(1.2); /* Erhöht die Helligkeit des Buttons beim Hover */
+}
+
+#prev {
+    left: 30%; /* Positioniert den Button 30% von der linken Seite */
+}
+
+#next {
+    right: 30%; /* Positioniert den Button 30% von der rechten Seite */
+}

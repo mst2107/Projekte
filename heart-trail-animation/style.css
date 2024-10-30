@@ -1,0 +1,35 @@
+/* Stile für das <body>-Element */
+body {
+    margin: 0; /* Entfernt den Standard-Rand um das <body>-Element */
+    height: 100vh; /* Setzt die Höhe des <body>-Elements auf 100% der viewport height (vh), also den gesamten sichtbaren Bereich des Browsers */
+    background-color: black; /* Setzt die Hintergrundfarbe des <body>-Elements auf schwarz */
+    overflow: hidden; /* Verhindert das Scrollen, wenn die Elemente außerhalb des sichtbaren Bereichs liegen */
+}
+
+/* Stile für das <span>-Element */
+span {
+    background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-256.png"); /* Setzt das Hintergrundbild des <span>-Elements */
+    width: 100px; /* Setzt die Breite des <span>-Elements auf 100 Pixel */
+    height: 100px; /* Setzt die Höhe des <span>-Elements auf 100 Pixel */
+    position: absolute; /* Positioniert das <span>-Element absolut, basierend auf dem nächstgelegenen positionierten Vorfahren */
+    pointer-events: none; /* Verhindert, dass das <span>-Element auf Mausereignisse reagiert (es ist nicht klickbar) */
+    background-size: cover; /* Sorgt dafür, dass das Hintergrundbild das gesamte <span>-Element abdeckt, ohne seine Proportionen zu ändern */
+    left: 50%; /* Positioniert das <span>-Element horizontal in der Mitte des Containers */
+    top: 50%; /* Positioniert das <span>-Element vertikal in der Mitte des Containers */
+    transform: translate(-50%, -50%); /* Verschiebt das <span>-Element um die Hälfte seiner Breite und Höhe, sodass es genau in der Mitte des Containers positioniert ist */
+    animation: animate 6s linear forwards; /* Wendet die 'animate'-Animation auf das <span>-Element an, die 6 Sekunden dauert, linear verläuft und nach Abschluss beibehalten wird */
+}
+
+/* Keyframes für die 'animate'-Animation */
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%); /* Anfangsposition: genau in der Mitte des Containers */
+        opacity: 1; /* Anfangs-Sichtbarkeit: vollständig sichtbar */
+        filter: hue-rotate(0); /* Anfangs-Hue-Rotation: keine Farbänderung */
+    }
+    100% {
+        transform: translate(-50%, -5000%); /* Endposition: sehr weit nach oben verschoben (außerhalb des sichtbaren Bereichs) */
+        opacity: 0; /* End-Sichtbarkeit: vollständig unsichtbar */
+        filter: hue-rotate(720deg); /* End-Hue-Rotation: Farbton wird um 720 Grad gedreht, was eine vollständige Farbänderung bedeutet */
+    }
+}

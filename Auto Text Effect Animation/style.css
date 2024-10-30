@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* Importiert die Google-Schriftart "Permanent Marker". 
+   Das `display=swap` sorgt dafür, dass der Text angezeigt wird, während die Schriftart geladen wird. */
+
+/* Styling für das <body>-Element */
+body {
+    margin: 0; /* Entfernt jeglichen Standard-Abstand oder Rand um den Body, der standardmäßig hinzugefügt wird. */
+    display: flex; /* Setzt das Layout auf flexbox, um einfaches Zentrieren und Layout-Management zu ermöglichen. */
+    justify-content: center; /* Zentriert den Inhalt horizontal in der Mitte des Bildschirms. */
+    height: 100vh; /* Stellt sicher, dass das Body-Element die gesamte Höhe des Viewports einnimmt. */
+    align-items: center; /* Zentriert den Inhalt auch vertikal. */
+    background-color: salmon; /* Setzt die Hintergrundfarbe auf "lachsfarben". */
+    font-family: "Permanent Marker", cursive; /* Setzt die Schriftart auf "Permanent Marker" mit einer alternativen, generischen Schriftart (cursive) für den Fall, dass die erste nicht verfügbar ist. */
+    font-weight: 400; /* Definiert die Dicke der Schriftart. In diesem Fall ist es die normale Dicke. */
+    font-style: normal; /* Setzt den Stil der Schrift auf normal (keine kursive Schrift o.ä.). */
+}

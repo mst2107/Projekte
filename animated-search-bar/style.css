@@ -1,0 +1,60 @@
+body {
+    margin: 0; /* Entfernt Standardabstände des Body-Elements */
+    display: flex; /* Nutzt Flexbox, um den Inhalt zu zentrieren */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    height: 100vh; /* Setzt die Höhe des Body auf 100% der Ansichtshöhe */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    background-color: aliceblue; /* Setzt die Hintergrundfarbe des Body auf "aliceblue" */
+}
+
+.search-bar-container {
+    display: flex; /* Setzt die Suchleiste als Flex-Container */
+    align-items: center; /* Zentriert den Inhalt vertikal innerhalb des Containers */
+    background-color: aliceblue; /* Hintergrundfarbe der Suchleiste */
+    padding: 5px; /* Innenabstand des Containers */
+    width: 300px; /* Anfangsbreite der Suchleiste */
+    height: 50px; /* Höhe der Suchleiste */
+    border-radius: 50px; /* Macht die Ecken der Suchleiste rund */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.7); /* Erzeugt einen 3D-Effekt durch Schatten */
+    margin: 10px; /* Außenabstand des Containers */
+    position: relative; /* Ermöglicht die absolute Positionierung der Icons innerhalb der Suchleiste */
+    transition: width 1.5s; /* Übergangseffekt für die Breite der Suchleiste */
+}
+
+.magnifier {
+    width: 25px; /* Größe des Lupen-Icons */
+    cursor: pointer; /* Ändert den Mauszeiger zu einem Zeigefinger beim Hover */
+    position: absolute; /* Positioniert das Icon absolut innerhalb der Suchleiste */
+    left: 20px; /* Abstand des Icons vom linken Rand */
+}
+
+.mic-icon {
+    width: 30px; /* Größe des Mikrofonsymbols */
+    position: absolute; /* Positioniert das Icon absolut innerhalb der Suchleiste */
+    right: 10px; /* Abstand des Icons vom rechten Rand */
+    transition: width .4s; /* Übergangseffekt für die Breite des Mikrofonsymbols */
+    transition-delay: 1s; /* Verzögert den Beginn des Übergangs um 1 Sekunde */
+}
+
+.input {
+    background-color: transparent; /* Setzt den Hintergrund des Eingabefelds auf transparent */
+    border: none; /* Entfernt den Standardrahmen des Eingabefelds */
+    margin: 10px 50px; /* Abstand innerhalb des Eingabefelds, um Platz für die Icons zu schaffen */
+    width: 100%; /* Das Eingabefeld füllt die gesamte Breite der Suchleiste aus */
+    outline: none; /* Entfernt den Fokusrahmen (Achtung bei Barrierefreiheit) */
+    color: rgb(100, 100, 100); /* Textfarbe im Eingabefeld */
+    transition: width 1s; /* Übergangseffekt für die Breite des Eingabefelds */
+    transition-delay: .5s; /* Verzögert den Beginn des Übergangs um 0,5 Sekunden */
+}
+
+.active.search-bar-container {
+    width: 50px; /* Verkleinert die Suchleiste, wenn die Klasse "active" hinzugefügt wird */
+}
+
+.active .input {
+    width: 0; /* Verkleinert das Eingabefeld auf 0, wenn die Klasse "active" aktiv ist */
+}
+
+.active .mic-icon {
+    width: 0; /* Verkleinert das Mikrofonsymbol auf 0, wenn die Klasse "active" aktiv ist */
+}
